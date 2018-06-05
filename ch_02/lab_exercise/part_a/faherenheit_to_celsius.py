@@ -1,5 +1,5 @@
 ## Part A : b ##
-# Convert Miles to Kilometers
+# Convert Faherenhit to Celsius
 # C = (F - 32) * 5 / 9
 again = 'y'
 while again == 'y':

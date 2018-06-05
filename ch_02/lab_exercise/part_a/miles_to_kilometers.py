@@ -4,7 +4,7 @@
 again = 'y'
 while again == 'y':
     try:
-        input_var = input("Enter a number >> ") # input value
+        input_var = input("William, please tell me how many miles you want to convert to kilometers >> ") # input value
         print("Convert ", input_var, "miles to kilometers.")
         print("Result >>> ", int(input_var) * 1.6, " kilometers.")
     # Pick up false cases
