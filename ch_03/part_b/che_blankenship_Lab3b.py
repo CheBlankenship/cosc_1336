@@ -38,16 +38,16 @@ if (commission):
             sales_commission_bonus = 0
         # Else if: commission is more than 10000
         elif(commission >= 10000):
-            sales_commission_bonus = 0
+            sales_commission_bonus = sales_commission_bonus * (2//100)
             # If: commission is more than 100000
             if(commission >= 100001):
-                sales_commission_bonus = sales_commission_bonus + 1000
+                sales_commission_bonus = sales_commission_bonus * (15//100)
                 # If: commission is more than 500000
                 if (commission >= 500001):
-                    sales_commission_bonus = sales_commission_bonus + 5000
+                    sales_commission_bonus = sales_commission_bonus * (28//100)
                     # If: commission is more than 1000000
                     if (commission > 1000000):
-                        sales_commission_bonus = sales_commission_bonus + 10000
+                        sales_commission_bonus = sales_commission_bonus * (35//100)
     # Invalid input.
     else:
         print("*** Invalid input. No negative numbers. Commission will be set to 0 ***\n")
