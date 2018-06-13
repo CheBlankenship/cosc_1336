@@ -15,17 +15,17 @@ if not (employee_name):
 
 
 ## Step 2. Their base salary - ok
-employee_work_hours = input("Enter employee\'s working hours for this month \n>>> ")
-if (employee_work_hours):
-    if (float(employee_work_hours) >= 0):
-        employee_work_hours = float(employee_work_hours)
-    else:
-        print("*** Invalid input. No negative numbers. Working hours will be set to 176 hours ***\n")
-        employee_work_hours = 176
-# Invalid input.
-else:
-    print("*** Invalid input. No negative numbers. Working hours will be set to 176 hours ***\n")
-    employee_work_hours = 176
+# employee_work_hours = input("Enter employee\'s working hours for this month \n>>> ")
+# if (employee_work_hours):
+#     if (float(employee_work_hours) >= 0):
+#         employee_work_hours = float(employee_work_hours)
+#     else:
+#         print("*** Invalid input. No negative numbers. Working hours will be set to 176 hours ***\n")
+#         employee_work_hours = 176
+# # Invalid input.
+# else:
+#     print("*** Invalid input. No negative numbers. Working hours will be set to 176 hours ***\n")
+#     employee_work_hours = 176
 
 
 ## Step 3. The commission earned (in Dollars). - ok
@@ -37,17 +37,17 @@ if (commission):
         if (commission < 10000):
             sales_commission_bonus = 0
         # Else if: commission is more than 10000
-        elif(commission >= 10000):
-            sales_commission_bonus = sales_commission_bonus * (2//100)
+        if(commission >= 10000):
+            sales_commission_bonus = commission * (2/100) + 0
             # If: commission is more than 100000
             if(commission >= 100001):
-                sales_commission_bonus = sales_commission_bonus * (15//100)
+                sales_commission_bonus = commission * (15/100) + 1000
                 # If: commission is more than 500000
                 if (commission >= 500001):
-                    sales_commission_bonus = sales_commission_bonus * (28//100)
+                    sales_commission_bonus = commission * (28/100) + 5000
                     # If: commission is more than 1000000
                     if (commission > 1000000):
-                        sales_commission_bonus = sales_commission_bonus * (35//100)
+                        sales_commission_bonus = commission * (35/100) + 100000
     # Invalid input.
     else:
         print("*** Invalid input. No negative numbers. Commission will be set to 0 ***\n")
@@ -91,15 +91,16 @@ else:
 days_of_vacation = input("Enter employee\'s days of vacation for this month \n>>> ")
 if (days_of_vacation):
     # Check if the input is not a negative number or not.
-    if (float(days_of_vacation) >= 0):
+    days_of_vacation = float(days_of_vacation)
+    if (days_of_vacation >= 0):
         # If the employee takes off more than 3 days off.
-        if (float(days_of_vacation) >= 3):
-            days_of_vacation = float(days_of_vacation)
+        if (days_of_vacation >= 3):
+            # days_of_vacation = days_of_vacation
             vacation_reduction = -200
-            total_bonus = total_bonus - 200
+            # total_bonus = total_bonus - 200
         # If the employee takes off less than 3 days.
-        if (float(days_of_vacation) < 3):
-            days_of_vacation = float(days_of_vacation)
+        # if (days_of_vacation < 3):
+            # days_of_vacation = days_of_vacation
     # Invalid input.
     else:
         print("*** Invalid input. No negative numbers. Input will be set to 0 ***\n")
@@ -110,9 +111,17 @@ else:
     days_of_vacation = 0
 
 
+print("-----------------------------------------------")
+print("sales_commission_bonus   >> ", sales_commission_bonus)
+print("vacation reduction       >> ", vacation_reduction)
+print("")
+
+
+
 # print("COM Bounus > ", sales_commission_bonus)
 ### Print ###
-total_bonus = total_bonus + sales_commission_bonus
+total_bonus = total_bonus + sales_commission_bonus + vacation_reduction
+
 total_gross_pay = employee_base_salary + total_bonus
 print("+----------------------------+------------------------------+")
 print("+ PAYCHECK ------------------+------------------------------+")
@@ -120,11 +129,11 @@ print("+----------------------------+------------------------------+")
 print("| Item                       | Value                         ")
 print("+----------------------------+------------------------------+")
 print("| Employee name              | ", employee_name)
-print("| Employee work hours        | ", format(employee_work_hours, ".2f"))
-print("| Vacation days              | ", days_of_vacation)
+# print("| Employee work hours        | ", format(employee_work_hours, ".2f"), "h")
+print("| Vacation days              | ", days_of_vacation, "days")
 print("| Base salary                | $", format(employee_base_salary, ".2f"))
-print("| Vacation reduction         | $", format(vacation_reduction, ".2f"))
 print("| sales commission bonus     | $", format(sales_commission_bonus, ".2f"))
+print("| Vacation reduction         | $", format(vacation_reduction, ".2f"))
 print("| Total bonus                | $", format(total_bonus, ".2f"))
 print("| Total gross pay            | $", format(total_gross_pay, ".2f"))
 print("+----------------------------+------------------------------+")

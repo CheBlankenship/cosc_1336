@@ -1,18 +1,11 @@
-
-arr = [2,3,5,7,2,7,83,4,7,4]
-print("Lenght > ", len(arr))
+avg_num = int(input("Enter a number >> "))
+sum = 0
 count = 0
 
-# Loop 10 times
-# for item in arr:
-#     count += 1
-#     print(item)
+while not avg_num == 9999:
+    sum = sum + avg_num
+    count = count + 1
+    avg_num = int(input("Enter a number. If you want to exit, enter 9999. \n>>> "))
 
-print("Count >> ", count)
 
-num = len(arr) - 1
-pos = 0
-while num >= 0:
-    print(arr[pos])
-    pos = pos + 1
-    num = num - 1
+print("Average >> ", sum / count)
