@@ -7,15 +7,15 @@ sales_bonus             = 0     # Bonus based on your sales record.
 
 
 ## Step 1. The name of the salesperson.
-employee_name = str(input("Enter employee\'s name \n>>> "))
+employee_name = str(input("Enter employee\'s name. \n>>> "))
 # Invalid input.
 if not (employee_name):
-    print("*** Invalid input. Employee\'s name will be set to 'Anonymous' ***\n")
+    print("*** Invalid input. Employee\'s name will be set to 'Anonymous'. ***\n")
     employee_name = "Anonymous"
 
 
 ## Step 2. The commission and bonus base on the sales amount (in Dollars).
-sales = input("Enter the amount of sales which the employee made for this month \n>>> $")
+sales = input("Enter the amount of sales which the employee made for this month. \n>>> $")
 if (sales):
     if (float(sales) >=0):
         sales = float(sales)
@@ -41,16 +41,16 @@ if (sales):
                         sales_bonus = 100000
     # Invalid input.
     else:
-        print("*** Invalid input. No negative numbers. Commission will be set to 0 ***\n")
+        print("*** Invalid input. No negative numbers. Commission will be set to 0. ***\n")
         commission_and_bonus = 0
 # Invalid input.
 else:
-    print("*** Invalid input. No negative numbers. Commission will be set to 0 ***\n")
+    print("*** Invalid input. No negative numbers. Commission will be set to 0. ***\n")
     commission_and_bonus = 0
 
 
 ## Step 3. Their longevity with the company.
-employee_longevity_bonus = input("Enter employee\'s longevity in month notation \n>>> ")
+employee_longevity_bonus = input("Enter employee\'s longevity in month notation. \n>>> ")
 if (employee_longevity_bonus):
     if (float(employee_longevity_bonus) >= 0):
         employee_longevity_bonus = float(employee_longevity_bonus)
@@ -68,16 +68,16 @@ if (employee_longevity_bonus):
             # get_bonus = False
     # Invalid input.
     else:
-        print("*** Invalid input. No negative numbers. Longevity will be set to 0 ***\n")
+        print("*** Invalid input. No negative numbers. Longevity will be set to 0. ***\n")
         employee_longevity_bonus = 0
 # Invalid input.
 else:
-    print("*** Invalid input. No negative numbers. Longevity will be set to 0 ***\n")
+    print("*** Invalid input. No negative numbers. Longevity will be set to 0. ***\n")
     employee_longevity_bonus = 0
 
 
 ## Step 4. Check how many vacations the employee is taking.
-days_of_vacation = input("Enter employee\'s days of vacation for this month \n>>> ")
+days_of_vacation = input("Enter employee\'s days of vacation for this month. \n>>> ")
 if (days_of_vacation):
     # Check if the input is not a negative number or not.
     days_of_vacation = float(days_of_vacation)
@@ -87,11 +87,11 @@ if (days_of_vacation):
             vacation_reduction = -200
     # Invalid input.
     else:
-        print("*** Invalid input. No negative numbers. Input will be set to 0 ***\n")
+        print("*** Invalid input. No negative numbers. Input will be set to 0. ***\n")
         days_of_vacation = 0
 # Invalid input.
 else:
-    print("*** Invalid input. No negative numbers. Input will be set to 0 ***\n")
+    print("*** Invalid input. No negative numbers. Input will be set to 0. ***\n")
     days_of_vacation = 0
 
 
