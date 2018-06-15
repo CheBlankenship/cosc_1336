@@ -6,10 +6,10 @@ grade_d = 60 # Over 60
 grade_e = 50 # Over 50
 num_of_students = 0 # Counter
 total_score     = 0
-# average_score   = 0
 
 
 score = input("Enter student's score. Or enter -1 to stop. \n>>> ")
+# Handle if the vlue is a valid input and enable to conver into type float.
 if ((score) and (float == type(float(score)))):
     print("check >>> ")
     if ((score) and (float == type(float(score)))):
@@ -32,9 +32,10 @@ if ((score) and (float == type(float(score)))):
                             print('Your grade is D...')
                             total_score = total_score + score
                         else:
-                            print('You made an F! Obviously you did not study')
+                            print('You made an F! Obviously you did not study.')
                             total_score = total_score + score
             score = float(input("Enter your score. \n>>> "))
+            # If input score is invalid and not able to convert into float, it will exit.
             if not ((score) and (float == type(float(score)))):
                 print("Error: Invalid input. No charactors. Only numbers. ")
         print("-----------------------------------------------")
