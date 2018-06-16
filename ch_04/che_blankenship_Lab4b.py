@@ -1,6 +1,11 @@
-for i in range(11, -1, -1):
+base_size = 10
+
+# Number of rows.
+for i in range(base_size, -1, -1):
     row = ""
-    for j in range(i - 1):
+    # Number of stars.
+    # Replace with "_" because it's unnecessary.
+    for _ in range(i):
         row = row + "*"
 
     print(row)
