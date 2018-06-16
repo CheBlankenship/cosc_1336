@@ -4,8 +4,9 @@ base_size = 10
 for i in range(base_size, -1, -1):
     row = ""
     # Number of stars.
-    # Replace with "_" because it's unnecessary.
-    for _ in range(i):
+    # j it's unnecessary. better replacing with "_".
+    # for _ in range(i):
+    for j in range(i):
         row = row + "*"
 
     print(row)
