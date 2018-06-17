@@ -1,14 +1,32 @@
+##
+## Created by Che Blankenship on 6/16/18.
+## Copyright © 2018 Che Blankenship. All rights reserved.
+##
+
+
+# This is a program that converts to a specific unit.
+# It will check
+# 1, If the input is valid.
+# 2, If the input is enable to convert into type float().
+# 3, If the input is larger than 0 (1 ~ 4).
+# 4, If the input is larger than 1000 (5).
+# 5, How many times the user entered a invalid input.
+#    If the user enters a invalid input more than 3 times,
+#    the program will terminate.
+
 counter = 1 # Add +1 everytime the user enters a invalid input.
 nums    = "0123456789" # Expect input charactors to be in nums.
 
 
 
-## Mil to Km ##
+## 1, Mil to Km ##
 while counter < 4:
     milesToKm = input("William, please tell me how many miles you want to convert to kilometers >>> ")
     # Check if the input is valid or not.
     if (milesToKm):
-        # Check if the input chars are only in nums : O(n)
+        # Check if the input chars are only in nums.
+        # Success case: Best, Avg, Worst -> O(n).
+        # Negative case: Best->O(1), Avg->O(n/2), Worst->O(n)
         valid_num = True
         for i in milesToKm:
             if i not in nums:
@@ -30,12 +48,14 @@ if counter == 5:
 
 
 
-## Gal to L ##
+## 2, Gal to L ##
 while counter < 4:
     galToL = input("William, please tell me how many gallons you want to convert to liters >>> ")
     # Check if the input is valid or not.
     if (galToL):
-        # Check if the input chars are only in nums : O(n)
+        # Check if the input chars are only in nums.
+        # Success case: Best, Avg, Worst -> O(n).
+        # Negative case: Best->O(1), Avg->O(n/2), Worst->O(n)
         valid_num = True
         for i in galToL:
             if i not in nums:
@@ -57,12 +77,14 @@ if counter == 5:
 
 
 
-## Lb to Kg ##
+## 3, Lb to Kg ##
 while counter < 4:
     poundToKg = input("William, please tell me how many pounds you want to convert to kilograms >>> ")
     # Check if the input is valid or not.
     if (poundToKg):
-        # Check if the input chars are only in nums : O(n)
+        # Check if the input chars are only in nums.
+        # Success case: Best, Avg, Worst -> O(n).
+        # Negative case: Best->O(1), Avg->O(n/2), Worst->O(n)
         valid_num = True
         for i in poundToKg:
             if i not in nums:
@@ -84,12 +106,14 @@ if counter == 5:
 
 
 
-## Inch to cm ##
+## 4, Inch to cm ##
 while counter < 4:
     inchesToCm = input("William, please tell me how many inches you want to convert to centimeters >>> ")
     # Check if the input is valid or not.
     if (inchesToCm):
-        # Check if the input chars are only in nums : O(n)
+        # Check if the input chars are only in nums.
+        # Success case: Best, Avg, Worst -> O(n).
+        # Negative case: Best->O(1), Avg->O(n/2), Worst->O(n)
         valid_num = True
         for i in inchesToCm:
             if i not in nums:
@@ -111,12 +135,14 @@ if counter == 5:
 
 
 
-## F to C ##
+## 5, F to C ##
 while counter < 4:
     fToC = input("William, please tell me how much faherenhit you want to convert to celsius >>> ")
     # Check if the input is valid or not.
     if (fToC):
-        # Check if the input chars are only in nums : O(n)
+        # Check if the input chars are only in nums.
+        # Success case: Best, Avg, Worst -> O(n).
+        # Negative case: Best->O(1), Avg->O(n/2), Worst->O(n)
         valid_num = True
         for i in fToC:
             if i not in nums:
