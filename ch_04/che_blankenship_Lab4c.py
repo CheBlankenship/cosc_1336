@@ -8,7 +8,7 @@ num_of_students = 0 # Counter
 total_score     = 0
 
 # Expect the input value which can be converted into type float.
-score = float(input("Enter student's score. Or enter -1 to stop. \n>>> "))
+score = float(input("Enter your score. Or enter -1 to stop the program. \n>>> "))
 
 while (score != -1):
     num_of_students = num_of_students + 1
@@ -31,12 +31,11 @@ while (score != -1):
                     print('You made an F! Obviously you did not study.')
                     total_score = total_score + score
 
-    score = float(input("Enter student's score. Or enter -1 to stop. \n>>> "))
+    score = float(input("Enter your score. Or enter -1 to stop the program. \n>>> "))
 
 # At the end of the program calculate a class average unless there were NO grades entered.
 if (total_score and num_of_students):
     print("---------------------+-------------------------")
-    print("Number of students   |", num_of_students, "students")
-    print("Total score          |", total_score)
     print("Average score        |", total_score // num_of_students)
+    print("Number of grades     |", num_of_students)
     print("---------------------+-------------------------")
