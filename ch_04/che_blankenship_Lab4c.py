@@ -34,8 +34,8 @@ while (score != -1):
     score = float(input("Enter your score. Or enter -1 to stop the program. \n>>> "))
 
 # At the end of the program calculate a class average unless there were NO grades entered.
-if (total_score and num_of_students):
+if (num_of_students):
     print("---------------------+-------------------------")
-    print("Average score        |", total_score // num_of_students)
-    print("Number of grades     |", num_of_students)
+    print("| Average score      |", total_score // num_of_students)
+    print("| Number of grades   |", num_of_students)
     print("---------------------+-------------------------")
