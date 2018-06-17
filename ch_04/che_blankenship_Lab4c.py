@@ -11,8 +11,6 @@ total_score     = 0
 score = float(input("Enter student's score. Or enter -1 to stop. \n>>> "))
 
 while (score != -1):
-    print("check")
-    score = float(score)
     num_of_students = num_of_students + 1
     if score >= grade_a:
         print('Congratulations! Your grade is A.')
