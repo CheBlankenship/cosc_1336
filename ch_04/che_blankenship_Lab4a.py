@@ -1,5 +1,5 @@
 ##
-## Created by Che Blankenship on 6/16/18.
+## Created by Che Blankenship on 6-16-18.
 ## Copyright © 2018 Che Blankenship. All rights reserved.
 ##
 
