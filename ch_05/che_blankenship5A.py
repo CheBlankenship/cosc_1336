@@ -6,6 +6,7 @@ def main(): # Void
     # Check the counter status.
     def checker(counter):
         return counter < 4
+        # Pass the input value into the function parameter.
 
     ## 1, Mil to Km ##
     def milesToKm(m2k):
@@ -68,6 +69,7 @@ def main(): # Void
 
     if checker(counter):
         f2c = input("William, please tell me how much faherenhit you want to convert to celsius >>> ")
+        # Pass the input value into the function parameter.
         fToc = FahToCel(f2c)
         print(fToc)
 
@@ -99,6 +101,7 @@ def main(): # Void
 
     if checker(counter):
         galToL = input("William, please tell me how many gallons you want to convert to liters >>> ")
+        # Pass the input value into the function parameter.
         gTol = GalToLit(galToL)
         print(gTol)
 
@@ -130,6 +133,7 @@ def main(): # Void
 
     if checker(counter):
         poundToKg = input("William, please tell me how many pounds you want to convert to kilograms >>> ")
+        # Pass the input value into the function parameter.
         ptok = PoundsToKg(poundToKg)
         print(ptok)
 
@@ -161,6 +165,7 @@ def main(): # Void
 
     if checker(counter):
         inchesToCm = input("William, please tell me how many inches you want to convert to centimeters >>> ")
+        # Pass the input value into the function parameter.
         itoc = InchesToCm(inchesToCm)
         print(itoc)
 
