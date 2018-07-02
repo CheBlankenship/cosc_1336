@@ -1,20 +1,27 @@
 import modules
 
+input_file = "conversion.txt"
 
-inp = input("Choose the converter \nMiles to kilometer (enter '1') \nGallons to liters (enter '2') \nPounds to kilograms   (enter '3') \nInches to centimeters (enter '4') \nFahrenheit to Celsius (enter '5') \n>>> ")
+for _ in range(4):
 
-try:
-    if inp == '1':
-        m2k = str(input("Please tell me how many miles you want to convert to kilometers >>> "))
-        if (m2k):
-            mTokm = modules.milesToKm(m2k)
-            print(mTokm)
-        else:
-            print("check")
-except ValueError:
-    print("OOPS")
-except TypeError:
-    print("OOPS")
+        try:
+            inp = input("Choose the converter \nMiles to kilometer (enter '1') \nGallons to liters (enter '2') \nPounds to kilograms   (enter '3') \nInches to centimeters (enter '4') \nFahrenheit to Celsius (enter '5') \n>>> ")
+            inp = int(inp)
+            if inp == 1:
+                m2k = str(input("Please tell me how many miles you want to convert to kilometers >>> "))
+                if (m2k):
+                    mTokm = modules.milesToKm(m2k)
+                    print(mTokm)
+                else:
+                    print("check")
+
+        except ValueError as error:
+            print("ERROR:", error)
+        except TypeError as error:
+            print("ERROR:", error)
+        finally:
+            print("ERROR: No negative numbers! Or there is some error for your input. ")
+
     # if input == '2':
     #     print("check 2>> ")
     #     galToL = input("Please tell me how many gallons you want to convert to liters >>> ")
