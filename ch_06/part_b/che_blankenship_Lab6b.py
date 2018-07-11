@@ -1,6 +1,6 @@
 import sys
 
-input_file = open("grades.txt", "w+")
+input_file = open("grades.txt", "a+")
 
 counter = 0
 while True:
@@ -16,27 +16,29 @@ while True:
             assert True
             student_grade = float(input("Enter students grade : "))
             assert 0 <= student_grade <= 100
+
+            # Chack if both student_name and student_grade are valid.
+            try:
+                if (student_name) and (student_grade):
+                    counter = counter + 1
+                    input_file.write("Student name: "+ str(student_name) + ", Grade: " + str(student_grade) + ".\n")
+                    if counter >= 12:
+                        break
+            except NameError:
+                print("* NameError: Student name or student grade is invalid .\n* Please start over again.\n")
+            ## close input validation error handling ##
         except AssertionError:
-            print("AssertionError: Student grade should be between 0 ~ 100.")
+            print("AssertionError: Student grade should be between 0 ~ 100.\n* Please start over again.\n")
         except ValueError:
-            print("ValueError: Could not convert student grade to type float.")
+            print("ValueError: Could not convert student grade to type float.\n* Please start over again.\n")
         except NameError:
-            print("NameError: Student grade is undefined.")
+            print("NameError: Student grade is undefined.\n* Please start over again.\n")
         ## close student grade err handling ##
 
     except AssertionError:
         print("AssertionError: Invalid student name. Enter a valid input.")
     ## close student name error handling ##
 
-    try:
-        if (student_name) and (student_grade):
-            counter = counter + 1
-            input_file.write("No." + str(counter) + ", Name: "+ str(student_name) + ", Grade: " + str(student_grade) + ".\n")
-            # if counter >= 12:
-            if counter >= 3:
-                break
-    except NameError:
-        print("* NameError: Student name or student grade is invalid .\n* Please start over again.\n")
 
 
 input_file.close()
@@ -52,12 +54,7 @@ try:
             print(line)
 except IOError:
     print ("Could not read file:", read_file)
+except NameError:
+    print("NameError: File name not found.")
 except: #handle other exceptions such as attribute errors
    print ("Unexpected error:", sys.exc_info()[0])
-
-
-
-
-    # Going to use it for open file try-except
-    # except NameError:
-    #     print("NameError: Invalid input. Please re-enter students name.")
