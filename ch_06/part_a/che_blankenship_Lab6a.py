@@ -1,12 +1,3 @@
-## Note ##
-# 1, The program will ask you for a valid input
-#   for ever until you enter a valid input.
-# 2, If will ask you ten times to enter a valid input.
-#   However, if you input a invalid input three times
-#
-
-
-
 # import modules.py file which has all the converter functions.
 import modules
 
@@ -15,7 +6,8 @@ import modules
 # It will keep asking the input till the user enters a valid input.
 while True: # infinit
 
-    input_file = open("conversions.txt", "w+")
+    # It will create a file called 'conversions.txt' if it doesn't exist.
+    output_file = open("conversions.txt", "w+")
     print("- Options ------------------------------")
     print("| Miles to kilometer     :enter 'a'")
     print("| Gallons to liters      :enter 'b'")
@@ -43,7 +35,7 @@ while True: # infinit
                         mTokm = modules.milesToKm(m2k)
                         print(mTokm)
                         if (mTokm):
-                            input_file.write(mTokm+"\n")
+                            output_file.write(mTokm+"\n")
                             count_num_of_convert += 1
                         if count_num_of_convert == 10:
                             quit()
@@ -52,7 +44,7 @@ while True: # infinit
                         if count_num_of_convert == 10:
                             quit()
                         else:
-                            input_file.write("Invalid input."+"\n")
+                            output_file.write("Invalid input."+"\n")
                             count_num_of_convert += 1
                             if count_num_of_convert == 10:
                                 quit()
@@ -69,7 +61,7 @@ while True: # infinit
                         galToLit = modules.GalToLit(gal2L)
                         print(galToLit)
                         if (galToLit):
-                            input_file.write(galToLit+"\n")
+                            output_file.write(galToLit+"\n")
                             count_num_of_convert += 1
                         if count_num_of_convert == 10:
                             quit()
@@ -78,7 +70,7 @@ while True: # infinit
                         if count_num_of_convert == 10:
                             quit()
                         else:
-                            input_file.write("Invalid input."+"\n")
+                            output_file.write("Invalid input."+"\n")
                             count_num_of_convert += 1
                             if count_num_of_convert == 10:
                                 quit()
@@ -95,7 +87,7 @@ while True: # infinit
                         pTokg = modules.PoundsToKg(pound2Kg)
                         print(pTokg)
                         if (pTokg):
-                            input_file.write(pTokg+"\n")
+                            output_file.write(pTokg+"\n")
                             count_num_of_convert += 1
                         if count_num_of_convert == 10:
                             quit()
@@ -104,7 +96,7 @@ while True: # infinit
                         if count_num_of_convert == 10:
                             quit()
                         else:
-                            input_file.write("Invalid input."+"\n")
+                            output_file.write("Invalid input."+"\n")
                             count_num_of_convert += 1
                             if count_num_of_convert == 10:
                                 quit()
@@ -122,7 +114,7 @@ while True: # infinit
                         inchesToCm = modules.InchesToCm(inches2Cm)
                         print(inchesToCm)
                         if (inchesToCm):
-                            input_file.write(inchesToCm+"\n")
+                            output_file.write(inchesToCm+"\n")
                             count_num_of_convert += 1
                         if count_num_of_convert == 10:
                             quit()
@@ -131,7 +123,7 @@ while True: # infinit
                         if count_num_of_convert == 10:
                             quit()
                         else:
-                            input_file.write("Invalid input."+"\n")
+                            output_file.write("Invalid input."+"\n")
                             count_num_of_convert += 1
                             if count_num_of_convert == 10:
                                 quit()
@@ -149,7 +141,7 @@ while True: # infinit
                         fToc = modules.FahToCel(f2c)
                         print(fToc)
                         if (fToc):
-                            input_file.write(fToc+"\n")
+                            output_file.write(fToc+"\n")
                             count_num_of_convert += 1
                         if count_num_of_convert == 10:
                             quit()
@@ -158,7 +150,7 @@ while True: # infinit
                         if count_num_of_convert == 10:
                             quit()
                         else:
-                            input_file.write("Invalid input."+"\n")
+                            output_file.write("Invalid input."+"\n")
                             count_num_of_convert += 1
                             if count_num_of_convert == 10:
                                 quit()
@@ -169,9 +161,10 @@ while True: # infinit
 
     except AssertionError:
         if option != "exit":
-            print("AssertionError: Invalid input. Enter 'a', 'b', 'c', 'd' or 'e'.\n")
+            print("AssertionError: Invalid input. Enter 'a', 'b', 'c', 'd' or 'e' or 'exit'.\n")
             continue
         else:
             exit()
 
-    input_file.close()
+
+    output_file.close()
