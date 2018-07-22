@@ -88,24 +88,3 @@ for num in range(0, 101, 10):
 i_and_c[0] = inches
 i_and_c[1] = centimeters
 print("Inc to cm: ", i_and_c)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#
-
-
-
-
-
-#
