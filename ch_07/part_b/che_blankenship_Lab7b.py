@@ -23,7 +23,8 @@ def list_modification(arr):
     arr.sort(reverse=True)
     print("Reverse: ", arr)
     # 3, Append the instructor’s name on the list.
-    arr.append("Kumpati Sravan")
+    teacher_name = input("Instructor name: ")
+    arr.append(str(teacher_name))
     # 4, Insert your own name at the beginning of the list.
     arr.insert(0, "Che Blankenship")
     # 5, Write the list to a file named “names.txt”.
